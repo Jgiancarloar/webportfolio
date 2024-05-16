@@ -5,6 +5,7 @@ import todolistv2 from "../img/todolistv2.png"
 import pokedex from "../img/pokedex.png"
 import movieapp from "../img/movieapp.png"
 import veterinaryrecord from "../img/veterinaryrecord.png"
+import { Link } from 'react-router-dom';
 
 const ProjectsCard = () => {
 
@@ -14,7 +15,7 @@ const ProjectsCard = () => {
       title: 'To-do List v1.',
       description: 'Lorem ipsum orem ipsum orem ipsum orem ipsum orem ipsum orem ipsum',
       link: '#',
-      github: '#',
+      github: 'https://github.com/Jgiancarloar/TodoList',
       image: todolistv1,
       tags: ['HTML', 'CSS', 'Javascript']
     },
@@ -32,7 +33,7 @@ const ProjectsCard = () => {
       title: 'Veterinary record',
       description: 'Lorem 2 ipsum orem ipsu2  orem ipsum 2rem ipsum 2orem2 ipsum or2em ipsum',
       link: '#2',
-      github: '#2',
+      github: 'https://github.com/Jgiancarloar/veterinaryregistry',
       image: veterinaryrecord,
       tags: ['Vite', 'React', 'Tailwind CSS']
     },
@@ -59,7 +60,7 @@ const ProjectsCard = () => {
       title: 'Pokedex',
       description: 'Lorem 2 ipsum orem ipsu2  orem ipsum 2rem ipsum 2orem2 ipsum or2em ipsum',
       link: '#2',
-      github: '#2',
+      github: 'https://github.com/Jgiancarloar/Pokedex',
       image: pokedex,
       tags: ['Vite', 'React', 'Tailwind CSS']
     }
@@ -81,7 +82,7 @@ const ProjectsCard = () => {
             </ul>
             <div className='flex gap-2 items-center  w-fit px-2 py-1 text-sm rounded-xl bg-amber-500 text-[#212121] font-semibold hover:bg-amber-400'>
               <span>GitHub</span>
-              <LiaExternalLinkAltSolid />
+              <Link to={project.github} target="_blank"><LiaExternalLinkAltSolid /></Link>
             </div>
             <img className='w-full shadow-lg border-b-4 border-transparent shadow-slate-100/30' src={project.image} alt="" />
             <hr className='my-5' />
