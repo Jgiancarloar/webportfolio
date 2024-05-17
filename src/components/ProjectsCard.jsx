@@ -1,5 +1,5 @@
 import React from 'react'
-import { LiaExternalLinkAltSolid } from "react-icons/lia";
+import { CiLink } from "react-icons/ci";
 import todolistv1 from "../img/todolistv1.png"
 import todolistv2 from "../img/todolistv2.png"
 import pokedex from "../img/pokedex.png"
@@ -13,8 +13,8 @@ const ProjectsCard = () => {
     {
       id: 1,
       title: 'To-do List v1.',
-      description: 'Lorem ipsum orem ipsum orem ipsum orem ipsum orem ipsum orem ipsum',
-      link: '#',
+      description: 'A to-do list application that allows you to create tasks, mark them as done, and delete them.',
+      link: 'https://jcodetodolist.netlify.app/',
       github: 'https://github.com/Jgiancarloar/TodoList',
       image: todolistv1,
       tags: ['HTML', 'CSS', 'Javascript']
@@ -22,17 +22,17 @@ const ProjectsCard = () => {
     {
       id: 2,
       title: 'To-do List v2.',
-      description: 'Lorem 2 ipsum orem ipsu2  orem ipsum 2rem ipsum 2orem2 ipsum or2em ipsum',
-      link: '#2',
-      github: '#2',
+      description: 'A to-do list application that allows you to create, edit, mark as done, and delete tasks. It also provides a list of pending and completed tasks.',
+      link: 'https://jcodetodolistv2.netlify.app',
+      github: 'https://github.com/Jgiancarloar/todolistappv2',
       image: todolistv2,
       tags: ['Vite', 'React', 'Tailwind CSS']
     },
     {
       id: 3,
       title: 'Veterinary record',
-      description: 'Lorem 2 ipsum orem ipsu2  orem ipsum 2rem ipsum 2orem2 ipsum or2em ipsum',
-      link: '#2',
+      description: 'An application to manage veterinary patient records, allowing you to create, list, edit, and delete records.',
+      link: 'https://veterinaryregistry.netlify.app',
       github: 'https://github.com/Jgiancarloar/veterinaryregistry',
       image: veterinaryrecord,
       tags: ['Vite', 'React', 'Tailwind CSS']
@@ -40,26 +40,26 @@ const ProjectsCard = () => {
     {
       id: 4,
       title: 'WeatherApp',
-      description: 'Lorem 2 ipsum orem ipsu2  orem ipsum 2rem ipsum 2orem2 ipsum or2em ipsum',
-      link: '#2',
-      github: '#2',
+      description: 'An application that allows you to view the weather and temperature of any city in real-time, connected to an API.',
+      link: 'https://jcodeweatherapp.netlify.app',
+      github: 'https://github.com/Jgiancarloar/weatherapp',
       image: todolistv1,
       tags: ['Vite', 'React', 'Tailwind CSS']
     },
     {
       id: 5,
       title: 'MovieApp',
-      description: 'Lorem 2 ipsum orem ipsu2  orem ipsum 2rem ipsum 2orem2 ipsum or2em ipsum',
-      link: '#2',
-      github: 'movieApp',
+      description: 'An application that allows you to search for movies and displays the image, title, release date, and a brief synopsis of each movie.',
+      link: 'https://jcodemovieapp.netlify.app',
+      github: 'https://github.com/Jgiancarloar/movieapp',
       image: movieapp,
       tags: ['Vite', 'React', 'Tailwind CSS']
     },
     {
       id: 6,
       title: 'Pokedex',
-      description: 'Lorem 2 ipsum orem ipsu2  orem ipsum 2rem ipsum 2orem2 ipsum or2em ipsum',
-      link: '#2',
+      description: 'An application that allows you to view information about each Pokémon, including name, weight, height, abilities, and evolutions.',
+      link: 'https://jcodepokedex.netlify.app',
       github: 'https://github.com/Jgiancarloar/Pokedex',
       image: pokedex,
       tags: ['Vite', 'React', 'Tailwind CSS']
@@ -80,11 +80,15 @@ const ProjectsCard = () => {
                 ))
               }
             </ul>
-            <div className='flex gap-2 items-center  w-fit px-2 py-1 text-sm rounded-xl bg-amber-500 text-[#212121] font-semibold hover:bg-amber-400'>
-              <span>GitHub</span>
-              <Link to={project.github} target="_blank"><LiaExternalLinkAltSolid /></Link>
+            <div className='px-2 py-1 w-fit text-sm rounded-xl bg-amber-500 text-[#212121] font-semibold hover:bg-amber-400'>
+              <Link className='flex gap-2 items-center' to={project.github} target="_blank">
+                <span>GitHub</span>
+                <CiLink size={20} />
+              </Link>
             </div>
-            <img className='w-full shadow-lg border-b-4 border-transparent shadow-slate-100/30' src={project.image} alt="" />
+            <Link to={project.link} target='_blank'>
+              <img className='w-full shadow-lg border-b-4 border-transparent shadow-slate-100/30' src={project.image} alt="" />
+            </Link>
             <hr className='my-5' />
           </article>
         ))
