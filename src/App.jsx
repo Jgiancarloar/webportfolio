@@ -26,7 +26,7 @@ function App() {
             <FaLinkedin size={35} className="hover:scale-110 hover:text-slate-300" />
             <FaGithubSquare size={35} className="hover:scale-110 hover:text-slate-300" />
           </div>
-          <div className="md:hidden grid place-items-center gap-2 text-slate-100">
+          <div className="sm:hidden grid place-items-center gap-2 text-slate-100">
             <span className="text-3xl font-bold">Projects</span>
             <Link to="informa" spy={true} smooth={true} duration={500}>
               <IoIosArrowDropdown size={35} />
